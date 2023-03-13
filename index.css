@@ -43,3 +43,7 @@ h2 {
     right: 0;
     background-color: lightcyan;
 }
+
+.sideButton button {
+    float: left;
+  }
