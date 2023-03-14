@@ -25,6 +25,11 @@ h2 {
     transform: translateX(-50%);
 }
 
+.center2 {
+    display: block;
+    margin: 0 auto;
+}
+
 .split {
     height: 100%;
     width: 50%;
@@ -34,16 +39,44 @@ h2 {
     overflow-x: hidden;
 }
 
-.left {
+.leftSide {
     left: 0;
-    background-color: lemonchiffon;
+    background-color: #FF6B6B;
 }
 
-.right {
+.rightSide {
     right: 0;
-    background-color: lightcyan;
+    background-color: #4ECDC4;
+    box-shadow: -5px 0px 0px 0px black, 5px 0px 0px 0px black;
 }
 
-.sideButton button {
-    float: left;
-  }
+.leftButton {
+    background-color: #7ADAD2;
+    border: 0px;
+}
+
+.leftButton:hover {
+    background-color: #47BAB2;
+}
+
+.rightButton {
+    background-color: #FF8F8F;
+    border: 0px;
+}
+
+.rightButton:hover {
+    background-color: #E86161;
+}
+
+.block {
+    display: block;
+    width: 75%;
+    padding: 28px 28px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.box {
+    background-color: #CF9FD1;
+}
