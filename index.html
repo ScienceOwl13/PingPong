@@ -7,19 +7,26 @@
 </head>
 <body>
 
-    <div class="box center" id="container">
-        <h1 class="">Scores</h1>
+    <div class="topBox center" id="container">
+        <h1 class="cText">Scores</h1>
+        <!-- <button id="dev1"><code>winner=false;</code></button> -->
+        <!-- <button id="dev2"><code>reset;</code></button> -->
+
+
+
     </div> 
 
 <div class="split leftSide">
     <h2 class="cText">Player 1</h2>
     
-    <h2 id="demo1" class="cText">0</h2>
+    <p id="demo1" class="score cText">0</p>
 
     <div>
-        <button class="block center2 rightButton" type="button" onclick="player1AddFunction()">+</button>
-        <button class="block center2 rightButton" type="button" onclick="player1SubFunction()">-</button>
+        <button class="block center2 leftButton" type="button" onclick="player1AddFunction()">+</button>
+        <button class="block center2 leftButton" type="button" onclick="player1SubFunction()">-</button>
     </div>
+
+    
 
 
 
@@ -28,15 +35,14 @@
 <div class="split rightSide">
     <h2 class="cText">Player 2</h2>
     
-    <h2 id="demo2" class="cText">0</h2>
+    <p id="demo2" class="score cText">0<p>
 
     <div>
-        <button class="block center2 leftButton" type="button" onclick="player2AddFunction()">+</button>
-        <button class="block center2 leftButton" type="button" onclick="player2SubFunction()">-</button>
+        <button class="block center2 rightButton" type="button" onclick="player2AddFunction()">+</button>
+        <button class="block center2 rightButton" type="button" onclick="player2SubFunction()">-</button>
     </div>
 
 </div>
-
 <script src="index.js"></script>
 
 </body>
