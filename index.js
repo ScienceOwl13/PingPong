@@ -1,25 +1,25 @@
 // Arrow Keys for P1
     document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 87 || event.which === 87) {
+        if (event.code === "KeyW") {
             player1AddFunction();
         }
     });
 
     document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 83 || event.which === 83) {
+        if (event.code === "KeyS") {
             player1SubFunction();
         }
     });
 
 // Arrow Keys for P2
     document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 38 || event.which === 38) {
+        if (event.code === "ArrowUp") {
             player2AddFunction();
         }
     });
 
     document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 40 || event.which === 40) {
+        if (event.code === "ArrowDown") {
             player2SubFunction();
         }
     });
@@ -34,7 +34,7 @@ function p1Win() {
 
         winner = true;
     }
-    else if (p1counter === 5 && p2counter === 0 && winner === false) {
+    else if (p1counter === 7 && p2counter === 0 && winner === false) {
         setTimeout(() => {
             window.alert("Player 1 wins!");
         }, 1);
@@ -51,7 +51,7 @@ function p2Win() {
 
         winner = true;
     }
-    else if (p2counter === 5 && p1counter === 0 && winner === false) {
+    else if (p2counter === 7 && p1counter === 0 && winner === false) {
         setTimeout(() => {
             window.alert("Player 2 wins!");
         }, 1);
