@@ -1,29 +1,19 @@
-// Arrow Keys for P1
-    document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 87 || event.which === 87) {
-            player1AddFunction();
-        }
-    });
+//FIX keycodes and stuff
 
-    document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 83 || event.which === 83) {
-            player1SubFunction();
-        }
-    });
-
-// Arrow Keys for P2
-    document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 38 || event.which === 38) {
-            player2AddFunction();
-        }
-    });
-
-    document.addEventListener("keydown", function(event) {
-        if (event.keyCode === 40 || event.which === 40) {
-            player2SubFunction();
-        }
-    });
-
+document.addEventListener("keydown", function(event) {
+    // WS Keys for P1
+    if (event.key.toLowerCase() === "w") {
+        player1AddFunction();
+    } else if (event.key.toLowerCase() === "s") {
+        player1SubFunction();
+    }
+    // Arrow Keys for P2
+    if (event.key === "ArrowUp") {
+        player2AddFunction();
+    } else if (event.key === "ArrowDown") {
+        player2SubFunction();
+    }
+});
 
 var winner = false;
 function p1Win() {
@@ -34,7 +24,7 @@ function p1Win() {
 
         winner = true;
     }
-    else if (p1counter === 5 && p2counter === 0 && winner === false) {
+    else if (p1counter === 7 && p2counter === 0 && winner === false) {
         setTimeout(() => {
             window.alert("Player 1 wins!");
         }, 1);
@@ -51,7 +41,7 @@ function p2Win() {
 
         winner = true;
     }
-    else if (p2counter === 5 && p1counter === 0 && winner === false) {
+    else if (p2counter === 7 && p1counter === 0 && winner === false) {
         setTimeout(() => {
             window.alert("Player 2 wins!");
         }, 1);
@@ -99,22 +89,18 @@ var p2counter = 0;
         p2Win()
 }
 
+//SECRET DEV BUTTONS
 
-
-
-const devButton = document.querySelector('#dev1');
-
-devButton.addEventListener('click', () => {
+document.querySelector('#dev1').addEventListener('click', () => {
     winner = false;
 });
 
-const devButton2 = document.querySelector('#dev2');
-
-devButton2.addEventListener('click', () => {
+document.querySelector('#dev2').addEventListener('click', () => {
     p1counter = 0;
     p2counter = 0;
     winner = false;
 
+    // Update the scores
     document.getElementById('demo1').innerHTML = p1counter;
     document.getElementById('demo2').innerHTML = p2counter;
 })

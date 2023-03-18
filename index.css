@@ -5,11 +5,6 @@ body {
     font-weight: 100;
 }
 
-/* h1 {
-    padding-left: 10em;
-    padding-right: 10em;
-} */
-
 h2 {
     padding-top: 3em;
     padding-left: 10em;
@@ -25,7 +20,7 @@ h2 {
     align-items: center;
 }
 
-#container {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +87,7 @@ h2 {
     margin-bottom: 5px;
 }
 
-.topBox {
+.box {
     width: 300px;
     height: 75px;
     background-color: #D7A1F9;
@@ -105,4 +100,16 @@ h2 {
     font-size: 175px;
     margin: 0px;
     font-weight: 400;
+}
+
+.topBox {
+    margin-top: 10px;
+}
+
+.bottomBox {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
 }
