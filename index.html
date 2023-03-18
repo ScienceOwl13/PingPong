@@ -3,23 +3,39 @@
 <head>
     <title>PingPong Tracker</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Test/test.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
     <div class="box center container topBox">
         <h1 class="cText">Scores</h1>
+    
+        <button id="popup-button">Open Pop-up</button>
+
+    
+
 
         <!-- Secret Dev Buttons -->
         <!-- <button id="dev1"><code>winner=false;</code></button>
-        <button id="dev2"><code>reset;</code></button> -->
+        <button id="dev2"><code>reset;</code></button> --> 
 
-    </div> 
+    </div>
+
 
     <!-- <div class="box center container bottomBox">
         <h1 class="cText">No</h1>
     </div>   -->
 
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <h2>Pop-up Content</h2>
+          <p>This is the content of the pop-up box.</p>
+          <button id="close-button">Close Pop-up</button>
+        </div>
+    </div>
+    
 <div class="split leftSide">
     <h2 class="cText">Player 1</h2>
     
@@ -29,11 +45,6 @@
         <button class="block center2 leftButton" type="button" onclick="player1AddFunction()">+</button>
         <button class="block center2 leftButton" type="button" onclick="player1SubFunction()">-</button>
     </div>
-
-    
-
-
-
 </div>
 
 <div class="split rightSide">
@@ -47,7 +58,7 @@
     </div>
 
 </div>
+<script src="Test/test.js"></script>
 <script src="index.js"></script>
-
 </body>
 </html>
